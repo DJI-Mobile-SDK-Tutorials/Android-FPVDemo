@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="dji.sdk"
+    android:versionCode="4"
+    android:versionName="V2.0.1_Beta06" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+       
+</manifest>

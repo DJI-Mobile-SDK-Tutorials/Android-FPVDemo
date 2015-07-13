@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FPVDemo</string>
+    <string name="action_settings">Settings</string>
+    <string name="demo_activation_error">Activation Error: </string>
+    <string name="demo_activation_error_code">Error Code: </string>
+    <string name="demo_activation_message_title">Activation Message</string>
+    <string name="press_again_exit">Press again to exit application</string>
+</resources>
