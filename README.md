@@ -75,7 +75,7 @@ In your onCreate method, add the following code. It looks like a lot, but the bu
 	new Thread(){
 		public void run(){
 			try{
-				DJIDrone.checkPermission(getApplicationContext(), new DJIGerneralListener(){
+				DJIDrone.checkPermission(getApplicationContext(), new DJIGeneralListener(){
 					@Override
 					public void onGetPermissionResult(int result){
 						if(result == 0) {
@@ -92,7 +92,6 @@ In your onCreate method, add the following code. It looks like a lot, but the bu
 					}
 				});
 			} catch (Exception e) {
-        			// TODO Auto-generated catch block
         			e.printStackTrace();
         		}
 		}
@@ -101,7 +100,7 @@ In your onCreate method, add the following code. It looks like a lot, but the bu
 
 Let's break this chunk of code down. You'll notice that we place all our code inside of a thread. The reason for this is because **checkPermission()** performs network operations, and such processes must be handled in a thread, lest the whole app freezes up while waiting for the network operation to complete.
 
-**checkPermission()** takes in two parameters: a context, and a **DJIGerneralListener()** object. **DJIGerneralListener()** is an interface containing one method: **onGetPermissionResult()**, which acts as a callback function that handles what to do when **checkPermission()** receives a response. 
+**checkPermission()** takes in two parameters: a context, and a **DJIGeneralListener()** object. **DJIGeneralListener()** is an interface containing one method: **onGetPermissionResult()**, which acts as a callback function that handles what to do when **checkPermission()** receives a response. 
 
 ~~~java
 @Override
@@ -542,7 +541,6 @@ private Handler handler = new Handler(new Handler.Callback() {
             viewTimer.setText(Integer.toString(i++));
 
         } catch (Exception e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         }
