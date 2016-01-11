@@ -1,0 +1,61 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+gson-2.1.jar => com.google.code.gson:gson:2.1
+
+Potentially Missing Dependency:
+-------------------------------
+When we replaced the following .jar files with a Gradle dependency, we
+inferred the dependency version number from the filename. This
+specific version may not actually be available from the repository.
+If you get a build error stating that the dependency is missing, edit
+the version number to for example "+" to pick up the latest version
+instead. (This may require you to update your code if the library APIs
+have changed.)
+
+gson-2.1.jar => version 2.1 in com.google.code.gson:gson:2.1
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => dJISDKLIB\src\main\AndroidManifest.xml
+* libs\armeabi-v7a\libdjivideo.so => dJISDKLIB\src\main\jniLibs\armeabi-v7a\libdjivideo.so
+* libs\armeabi-v7a\libFlyForbid.so => dJISDKLIB\src\main\jniLibs\armeabi-v7a\libFlyForbid.so
+* libs\armeabi-v7a\libGroudStation.so => dJISDKLIB\src\main\jniLibs\armeabi-v7a\libGroudStation.so
+* libs\armeabi-v7a\libstlport_shared.so => dJISDKLIB\src\main\jniLibs\armeabi-v7a\libstlport_shared.so
+* libs\armeabi-v7a\libudt.so => dJISDKLIB\src\main\jniLibs\armeabi-v7a\libudt.so
+* libs\armeabi-v7a\libudtjni.so => dJISDKLIB\src\main\jniLibs\armeabi-v7a\libudtjni.so
+* libs\armeabi-v7a\libyuv2.so => dJISDKLIB\src\main\jniLibs\armeabi-v7a\libyuv2.so
+* libs\bouncycastle.jar => dJISDKLIB\libs\bouncycastle.jar
+* libs\dji-sdk.jar => dJISDKLIB\libs\dji-sdk.jar
+* libs\eventbus.jar => dJISDKLIB\libs\eventbus.jar
+* libs\pinyin4j-2.5.0.jar => dJISDKLIB\libs\pinyin4j-2.5.0.jar
+* res\ => dJISDKLIB\src\main\res\
+* src\ => dJISDKLIB\src\main\java
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)
