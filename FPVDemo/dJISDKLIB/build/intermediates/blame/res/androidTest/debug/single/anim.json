@@ -1,0 +1,114 @@
+[
+    {
+        "merged": "/Users/zlinoliver/Documents/DJI-SDK/documentation/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/anim/core_push_right_out.xml",
+        "source": "/Users/zlinoliver/Documents/DJI-SDK/documentation/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/bundles/debug/res/anim/core_push_right_out.xml"
+    },
+    {
+        "merged": "/Users/zlinoliver/Documents/DJI-SDK/documentation/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/anim/core_push_left_in.xml",
+        "source": "/Users/zlinoliver/Documents/DJI-SDK/documentation/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/bundles/debug/res/anim/core_push_left_in.xml"
+    },
+    {
+        "merged": "/Users/zlinoliver/Documents/DJI-SDK-Github/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/anim/core_zoom_exit_back.xml",
+        "source": "/Users/zlinoliver/Documents/DJI-SDK-Github/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/bundles/debug/res/anim/core_zoom_exit_back.xml"
+    },
+    {
+        "merged": "/Users/zlinoliver/Documents/DJI-SDK-Github/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/anim/core_push_left_out.xml",
+        "source": "/Users/zlinoliver/Documents/DJI-SDK-Github/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/bundles/debug/res/anim/core_push_left_out.xml"
+    },
+    {
+        "merged": "/Users/zlinoliver/Documents/DJI-SDK/documentation/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/anim/core_hold.xml",
+        "source": "/Users/zlinoliver/Documents/DJI-SDK/documentation/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/bundles/debug/res/anim/core_hold.xml"
+    },
+    {
+        "merged": "/Users/zlinoliver/Documents/DJI-SDK/documentation/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/anim/core_push_up_out.xml",
+        "source": "/Users/zlinoliver/Documents/DJI-SDK/documentation/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/bundles/debug/res/anim/core_push_up_out.xml"
+    },
+    {
+        "merged": "/Users/zlinoliver/Documents/DJI-SDK/documentation/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/anim/core_zoom_enter_back.xml",
+        "source": "/Users/zlinoliver/Documents/DJI-SDK/documentation/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/bundles/debug/res/anim/core_zoom_enter_back.xml"
+    },
+    {
+        "merged": "/Users/zlinoliver/Documents/DJI-SDK-Github/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/anim/core_push_left_in.xml",
+        "source": "/Users/zlinoliver/Documents/DJI-SDK-Github/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/bundles/debug/res/anim/core_push_left_in.xml"
+    },
+    {
+        "merged": "/Users/zlinoliver/Documents/DJI-SDK-Github/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/anim/core_push_right_out.xml",
+        "source": "/Users/zlinoliver/Documents/DJI-SDK-Github/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/bundles/debug/res/anim/core_push_right_out.xml"
+    },
+    {
+        "merged": "/Users/zlinoliver/Documents/DJI-SDK/documentation/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/anim/core_hyperspace_in.xml",
+        "source": "/Users/zlinoliver/Documents/DJI-SDK/documentation/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/bundles/debug/res/anim/core_hyperspace_in.xml"
+    },
+    {
+        "merged": "/Users/zlinoliver/Documents/DJI-SDK/documentation/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/anim/core_push_up_in.xml",
+        "source": "/Users/zlinoliver/Documents/DJI-SDK/documentation/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/bundles/debug/res/anim/core_push_up_in.xml"
+    },
+    {
+        "merged": "/Users/zlinoliver/Documents/DJI-SDK/documentation/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/anim/core_zoom_enter.xml",
+        "source": "/Users/zlinoliver/Documents/DJI-SDK/documentation/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/bundles/debug/res/anim/core_zoom_enter.xml"
+    },
+    {
+        "merged": "/Users/zlinoliver/Documents/DJI-SDK/documentation/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/anim/core_hyperspace_out.xml",
+        "source": "/Users/zlinoliver/Documents/DJI-SDK/documentation/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/bundles/debug/res/anim/core_hyperspace_out.xml"
+    },
+    {
+        "merged": "/Users/zlinoliver/Documents/DJI-SDK/documentation/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/anim/core_zoom_exit_back.xml",
+        "source": "/Users/zlinoliver/Documents/DJI-SDK/documentation/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/bundles/debug/res/anim/core_zoom_exit_back.xml"
+    },
+    {
+        "merged": "/Users/zlinoliver/Documents/DJI-SDK-Github/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/anim/core_push_up_out.xml",
+        "source": "/Users/zlinoliver/Documents/DJI-SDK-Github/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/bundles/debug/res/anim/core_push_up_out.xml"
+    },
+    {
+        "merged": "/Users/zlinoliver/Documents/DJI-SDK/documentation/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/anim/core_other.xml",
+        "source": "/Users/zlinoliver/Documents/DJI-SDK/documentation/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/bundles/debug/res/anim/core_other.xml"
+    },
+    {
+        "merged": "/Users/zlinoliver/Documents/DJI-SDK-Github/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/anim/core_hyperspace_in.xml",
+        "source": "/Users/zlinoliver/Documents/DJI-SDK-Github/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/bundles/debug/res/anim/core_hyperspace_in.xml"
+    },
+    {
+        "merged": "/Users/zlinoliver/Documents/DJI-SDK-Github/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/anim/core_zoom_enter_back.xml",
+        "source": "/Users/zlinoliver/Documents/DJI-SDK-Github/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/bundles/debug/res/anim/core_zoom_enter_back.xml"
+    },
+    {
+        "merged": "/Users/zlinoliver/Documents/DJI-SDK/documentation/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/anim/core_push_left_out.xml",
+        "source": "/Users/zlinoliver/Documents/DJI-SDK/documentation/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/bundles/debug/res/anim/core_push_left_out.xml"
+    },
+    {
+        "merged": "/Users/zlinoliver/Documents/DJI-SDK-Github/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/anim/core_zoom_exit.xml",
+        "source": "/Users/zlinoliver/Documents/DJI-SDK-Github/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/bundles/debug/res/anim/core_zoom_exit.xml"
+    },
+    {
+        "merged": "/Users/zlinoliver/Documents/DJI-SDK/documentation/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/anim/core_zoom_exit.xml",
+        "source": "/Users/zlinoliver/Documents/DJI-SDK/documentation/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/bundles/debug/res/anim/core_zoom_exit.xml"
+    },
+    {
+        "merged": "/Users/zlinoliver/Documents/DJI-SDK-Github/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/anim/core_push_right_in.xml",
+        "source": "/Users/zlinoliver/Documents/DJI-SDK-Github/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/bundles/debug/res/anim/core_push_right_in.xml"
+    },
+    {
+        "merged": "/Users/zlinoliver/Documents/DJI-SDK-Github/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/anim/core_hold.xml",
+        "source": "/Users/zlinoliver/Documents/DJI-SDK-Github/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/bundles/debug/res/anim/core_hold.xml"
+    },
+    {
+        "merged": "/Users/zlinoliver/Documents/DJI-SDK-Github/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/anim/core_hyperspace_out.xml",
+        "source": "/Users/zlinoliver/Documents/DJI-SDK-Github/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/bundles/debug/res/anim/core_hyperspace_out.xml"
+    },
+    {
+        "merged": "/Users/zlinoliver/Documents/DJI-SDK-Github/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/anim/core_push_up_in.xml",
+        "source": "/Users/zlinoliver/Documents/DJI-SDK-Github/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/bundles/debug/res/anim/core_push_up_in.xml"
+    },
+    {
+        "merged": "/Users/zlinoliver/Documents/DJI-SDK/documentation/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/anim/core_push_right_in.xml",
+        "source": "/Users/zlinoliver/Documents/DJI-SDK/documentation/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/bundles/debug/res/anim/core_push_right_in.xml"
+    },
+    {
+        "merged": "/Users/zlinoliver/Documents/DJI-SDK-Github/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/anim/core_zoom_enter.xml",
+        "source": "/Users/zlinoliver/Documents/DJI-SDK-Github/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/bundles/debug/res/anim/core_zoom_enter.xml"
+    },
+    {
+        "merged": "/Users/zlinoliver/Documents/DJI-SDK-Github/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/anim/core_other.xml",
+        "source": "/Users/zlinoliver/Documents/DJI-SDK-Github/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/bundles/debug/res/anim/core_other.xml"
+    }
+]
