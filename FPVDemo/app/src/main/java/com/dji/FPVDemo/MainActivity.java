@@ -209,7 +209,7 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
         mShootPhotoModeBtn.setOnClickListener(this);
         mRecordVideoModeBtn.setOnClickListener(this);
 
-        recordingTime.setVisibility(View.INVISIBLE);
+//        recordingTime.setVisibility(View.INVISIBLE);
 
         mRecordBtn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override

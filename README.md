@@ -407,7 +407,7 @@ Moreover, let's add the following elements as childs of element on top of the "M
 <uses-library android:name="com.android.future.usb.accessory" />
 <meta-data
     android:name="com.dji.sdk.API_KEY"
-    android:value="68f337917d323063a26ac8f6" />
+    android:value="Please enter your APP Key here." />
 
 <activity
     android:name="dji.sdk.SDKManager.DJIAoaControllerActivity"

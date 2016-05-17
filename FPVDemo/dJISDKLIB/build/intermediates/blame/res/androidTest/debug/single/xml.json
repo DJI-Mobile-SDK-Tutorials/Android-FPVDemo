@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/Users/zlinoliver/Documents/DJI-SDK/documentation/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/xml/accessory_filter.xml",
-        "source": "/Users/zlinoliver/Documents/DJI-SDK/documentation/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/bundles/debug/res/xml/accessory_filter.xml"
-    },
-    {
         "merged": "/Users/zlinoliver/Documents/DJI-SDK-Github/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/res/merged/androidTest/debug/xml/accessory_filter.xml",
         "source": "/Users/zlinoliver/Documents/DJI-SDK-Github/Android-FPVDemo/FPVDemo/dJISDKLIB/build/intermediates/bundles/debug/res/xml/accessory_filter.xml"
     }
