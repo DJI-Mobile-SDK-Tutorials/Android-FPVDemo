@@ -18,7 +18,7 @@ You can download the firmware of the product (Phantom 3 Series, Inspire 1, Inspi
 
 Then check this [How to Update the Firmware](http://dl.djicdn.com/downloads/phantom_3/en/Firmware_Update_Guide_en_v1.4.pdf) tutorial for instructions on updating the Phantom 3 Professional's firmware.### Setup Android Development Environment
    
-  Throughout this tutorial we will be using Android Studio 1.5.1, which you can download from here: <http://developer.android.com/sdk/index.html>.
+  Throughout this tutorial we will be using Android Studio 2.1, which you can download from here: <http://developer.android.com/sdk/index.html>.
 
 ## Implementing the UI of Application
 
@@ -534,7 +534,7 @@ Now let's build and run the project and install it to your Android device. If ev
 
 ![registerSuccess](./Images/registerSuccess.png)
 
-> **Important:** Please check if the "armeabi-v7a" lib folder has been added to your jnLibs folder in **dJISDKLib** successfully before testing resgistering the app. 
+> **Important:** Please check if the "armeabi-v7a", "arm64-v8a" and "x86" lib folders has been added to your jnLibs folder in **dJISDKLib** successfully before testing resgistering the app. 
 > 
 > ![armeabi](./Images/armeabi.png)
 > 
