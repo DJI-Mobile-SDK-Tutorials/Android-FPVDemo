@@ -395,7 +395,6 @@ After you finish the above steps, let's register our application with the **App 
 **1.** Let's open the AndroidManifest.xml file and add the following elements on top of the **application** element:
 
 ~~~xml
-<uses-sdk
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
