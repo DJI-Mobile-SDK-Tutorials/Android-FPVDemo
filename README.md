@@ -8,15 +8,21 @@
 
 This tutorial is designed for you to gain a basic understanding of the DJI Mobile SDK. It will implement the FPV view and two basic camera functionalities: **Take Photo** and **Record video**.
 
-   You can download the entire project for this tutorial from this **Github Page**.
+   You can download the entire project for this tutorial from this **Github Page**.
+
 ## Preparation
 
 ### Download the SDK
 
-You can download the latest Android SDK from here: <https://developer.dji.com/mobile-sdk/downloads/>### Upgrade Firmware
+You can download the latest Android SDK from here: <https://developer.dji.com/mobile-sdk/downloads/>
+
+### Upgrade Firmware
+
 You can download the firmware of the product (Phantom 3 Series, Inspire 1, Inspire Pro, M100, OSMO, etc) through here: <https://developer.dji.com/mobile-sdk/downloads/>.
 
-Then check this [How to Update the Firmware](http://dl.djicdn.com/downloads/phantom_3/en/Firmware_Update_Guide_en_v1.4.pdf) tutorial for instructions on updating the Phantom 3 Professional's firmware.### Setup Android Development Environment
+Then check this [How to Update the Firmware](http://dl.djicdn.com/downloads/phantom_3/en/Firmware_Update_Guide_en_v1.4.pdf) tutorial for instructions on updating the Phantom 3 Professional's firmware.
+
+### Setup Android Development Environment
    
   Throughout this tutorial we will be using Android Studio 2.1, which you can download from here: <http://developer.android.com/sdk/index.html>.
 
@@ -395,7 +401,7 @@ After you finish the above steps, let's register our application with the **App 
 **1.** Let's open the AndroidManifest.xml file and add the following elements on top of the **application** element:
 
 ~~~xml
-<uses-sdk
+
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
