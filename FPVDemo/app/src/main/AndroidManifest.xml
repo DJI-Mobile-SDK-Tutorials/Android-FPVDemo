@@ -26,6 +26,8 @@
         android:name="android.hardware.usb.accessory"
         android:required="true" />
 
+    <!-- SDK requirement permission end -->
+
     <application
         android:name=".FPVDemoApplication"
         android:allowBackup="true"
