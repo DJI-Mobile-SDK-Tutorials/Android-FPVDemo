@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="dji_eventbus">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dJISDKLIB/libs/dji_eventbus.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

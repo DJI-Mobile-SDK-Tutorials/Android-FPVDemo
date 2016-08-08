@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="dji_gson">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dJISDKLIB/libs/dji_gson.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
