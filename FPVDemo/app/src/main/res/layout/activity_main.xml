@@ -3,41 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-	
-   	<RelativeLayout
-        android:id="@+id/main_title_rl"
-        android:layout_width="fill_parent"
-        android:layout_height="40dp"
-        android:background="@color/black_overlay" >
-
-        <ImageButton
-            android:id="@+id/ReturnBtnCamera"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="20dp"
-            android:adjustViewBounds="true"
-            android:background="@android:color/transparent"
-            android:onClick="onReturn"
-            android:scaleType="centerInside"
-            android:src="@drawable/selector_back_button" />
-
-        <TextView
-            android:id="@+id/ConnectStatusTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="FPVDemo"
-            android:textColor="@android:color/white"
-            android:textSize="21sp" />
-    </RelativeLayout>
     
     <TextureView
         android:id="@+id/video_previewer_surface"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/main_title_rl"
         android:layout_gravity="center"
         android:layout_centerHorizontal="true"
         android:layout_above="@+id/linearLayout" />

@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">SDK-FPV-Tutorial</string>
+    <string name="app_name">DJI FPV Demo</string>
     <string name="action_settings">Settings</string>   
     <string name="disconnected">Disconnected</string>
+    <string name="product_information">Product Information</string>
+    <string name="connection_loose">Status: No Product Connected</string>
+    <string name="sdk_version">DJI SDK Version: 3.2.1</string>
 
 </resources>

@@ -40,7 +40,7 @@
         <uses-library android:name="com.android.future.usb.accessory" />
         <meta-data
             android:name="com.dji.sdk.API_KEY"
-            android:value="Please enter your APP Key here." />
+            android:value="Please enter your App Key here." />
 
         <activity
             android:name="dji.sdk.SDKManager.DJIAoaControllerActivity"
@@ -57,15 +57,16 @@
         </service>
         <!-- DJI SDK -->
 
-        <activity android:name=".MainActivity"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+        <activity android:name=".ConnectionActivity"
+            android:screenOrientation="portrait">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="landscape"></activity>
     </application>
 
 </manifest>
