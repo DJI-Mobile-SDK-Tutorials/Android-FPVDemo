@@ -14,15 +14,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
-import dji.sdk.Camera.DJICamera;
-import dji.sdk.Camera.DJICamera.CameraReceivedVideoDataCallback;
-import dji.sdk.Codec.DJICodecManager;
-import dji.sdk.base.DJIBaseComponent.DJICompletionCallback;
+import dji.common.camera.CameraSystemState;
+import dji.common.camera.DJICameraSettingsDef;
+import dji.common.error.DJIError;
+import dji.common.product.Model;
+import dji.common.util.DJICommonCallbacks;
+import dji.sdk.camera.DJICamera;
+import dji.sdk.camera.DJICamera.CameraReceivedVideoDataCallback;
+import dji.sdk.codec.DJICodecManager;
 import dji.sdk.base.DJIBaseProduct;
-import dji.sdk.base.DJIBaseProduct.Model;
-import dji.sdk.base.DJIError;
-import dji.sdk.Camera.DJICameraSettingsDef.CameraMode;
-import dji.sdk.Camera.DJICameraSettingsDef.CameraShootPhotoMode;
+
 
 public class MainActivity extends Activity implements SurfaceTextureListener,OnClickListener{
 
@@ -62,9 +63,10 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
         DJICamera camera = FPVDemoApplication.getCameraInstance();
 
         if (camera != null) {
+
             camera.setDJICameraUpdatedSystemStateCallback(new DJICamera.CameraUpdatedSystemStateCallback() {
                 @Override
-                public void onResult(DJICamera.CameraSystemState cameraSystemState) {
+                public void onResult(CameraSystemState cameraSystemState) {
                     if (null != cameraSystemState) {
 
                         int recordTime = cameraSystemState.getCurrentVideoRecordingTimeInSeconds();
@@ -95,6 +97,7 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
                     }
                 }
             });
+
         }
 
     }
@@ -246,11 +249,11 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
                 break;
             }
             case R.id.btn_shoot_photo_mode:{
-                switchCameraMode(CameraMode.ShootPhoto);
+                switchCameraMode(DJICameraSettingsDef.CameraMode.ShootPhoto);
                 break;
             }
             case R.id.btn_record_video_mode:{
-                switchCameraMode(CameraMode.RecordVideo);
+                switchCameraMode(DJICameraSettingsDef.CameraMode.RecordVideo);
                 break;
             }
             default:
@@ -258,11 +261,11 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
         }
     }
 
-    private void switchCameraMode(CameraMode cameraMode){
+    private void switchCameraMode(DJICameraSettingsDef.CameraMode cameraMode){
 
         DJICamera camera = FPVDemoApplication.getCameraInstance();
         if (camera != null) {
-            camera.setCameraMode(cameraMode, new DJICompletionCallback() {
+            camera.setCameraMode(cameraMode, new DJICommonCallbacks.DJICompletionCallback() {
                 @Override
                 public void onResult(DJIError error) {
 
@@ -280,13 +283,13 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
     // Method for taking photo
     private void captureAction(){
 
-        CameraMode cameraMode = CameraMode.ShootPhoto;
+        DJICameraSettingsDef.CameraMode cameraMode = DJICameraSettingsDef.CameraMode.ShootPhoto;
 
         final DJICamera camera = FPVDemoApplication.getCameraInstance();
         if (camera != null) {
 
-            CameraShootPhotoMode photoMode = CameraShootPhotoMode.Single; // Set the camera capture mode as Single mode
-            camera.startShootPhoto(photoMode, new DJICompletionCallback() {
+            DJICameraSettingsDef.CameraShootPhotoMode photoMode = DJICameraSettingsDef.CameraShootPhotoMode.Single; // Set the camera capture mode as Single mode
+            camera.startShootPhoto(photoMode, new DJICommonCallbacks.DJICompletionCallback() {
 
                 @Override
                 public void onResult(DJIError error) {
@@ -304,10 +307,10 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
     // Method for starting recording
     private void startRecord(){
 
-        CameraMode cameraMode = CameraMode.RecordVideo;
+        DJICameraSettingsDef.CameraMode cameraMode = DJICameraSettingsDef.CameraMode.RecordVideo;
         final DJICamera camera = FPVDemoApplication.getCameraInstance();
         if (camera != null) {
-            camera.startRecordVideo(new DJICompletionCallback(){
+            camera.startRecordVideo(new DJICommonCallbacks.DJICompletionCallback(){
                 @Override
                 public void onResult(DJIError error)
                 {
@@ -326,7 +329,7 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
 
         DJICamera camera = FPVDemoApplication.getCameraInstance();
         if (camera != null) {
-            camera.stopRecordVideo(new DJICompletionCallback(){
+            camera.stopRecordVideo(new DJICommonCallbacks.DJICompletionCallback(){
 
                 @Override
                 public void onResult(DJIError error)

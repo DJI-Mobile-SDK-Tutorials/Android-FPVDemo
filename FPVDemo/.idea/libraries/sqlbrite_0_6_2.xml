@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="sqlbrite-0.6.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dJISDKLIB/libs/sqlbrite-0.6.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

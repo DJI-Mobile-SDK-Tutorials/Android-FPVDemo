@@ -14,7 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import dji.sdk.Products.DJIAircraft;
+import dji.sdk.products.DJIAircraft;
 import dji.sdk.base.DJIBaseProduct;
 
 public class ConnectionActivity extends Activity implements View.OnClickListener {

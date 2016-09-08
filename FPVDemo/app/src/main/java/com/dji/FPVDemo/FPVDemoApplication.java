@@ -7,17 +7,18 @@ import android.os.Looper;
 import android.util.Log;
 import android.widget.Toast;
 
-import dji.sdk.Camera.DJICamera;
-import dji.sdk.Products.DJIAircraft;
-import dji.sdk.Products.DJIHandHeld;
-import dji.sdk.SDKManager.DJISDKManager;
+import dji.common.handheld.DJIHandheldButtonStatus;
+import dji.sdk.camera.DJICamera;
+import dji.sdk.products.DJIAircraft;
+import dji.sdk.products.DJIHandHeld;
+import dji.sdk.sdkmanager.DJISDKManager;
 import dji.sdk.base.DJIBaseComponent;
 import dji.sdk.base.DJIBaseComponent.DJIComponentListener;
 import dji.sdk.base.DJIBaseProduct;
 import dji.sdk.base.DJIBaseProduct.DJIBaseProductListener;
 import dji.sdk.base.DJIBaseProduct.DJIComponentKey;
-import dji.sdk.base.DJIError;
-import dji.sdk.base.DJISDKError;
+import dji.common.error.DJIError;
+import dji.common.error.DJISDKError;
 
 public class FPVDemoApplication extends Application{
 
@@ -49,8 +50,17 @@ public class FPVDemoApplication extends Application{
     public static synchronized DJICamera getCameraInstance() {
 
         if (getProductInstance() == null) return null;
-        return getProductInstance().getCamera();
 
+        DJICamera camera = null;
+
+        if (getProductInstance() instanceof DJIAircraft){
+            camera = ((DJIAircraft) getProductInstance()).getCamera();
+
+        } else if (getProductInstance() instanceof DJIHandHeld) {
+            camera = ((DJIHandHeld) getProductInstance()).getCamera();
+        }
+
+        return camera;
     }
 
     @Override
