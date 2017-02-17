@@ -3,6 +3,7 @@ package com.dji.FPVDemo;
 import android.app.Activity;
 import android.graphics.SurfaceTexture;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.TextureView;
 import android.view.View;
@@ -14,21 +15,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
-import dji.common.camera.CameraSystemState;
-import dji.common.camera.DJICameraSettingsDef;
+import dji.common.camera.SettingsDefinitions;
+import dji.common.camera.SystemState;
 import dji.common.error.DJIError;
 import dji.common.product.Model;
-import dji.common.util.DJICommonCallbacks;
-import dji.sdk.camera.DJICamera;
-import dji.sdk.camera.DJICamera.CameraReceivedVideoDataCallback;
+import dji.common.util.CommonCallbacks;
+import dji.sdk.base.BaseProduct;
+import dji.sdk.camera.Camera;
 import dji.sdk.codec.DJICodecManager;
-import dji.sdk.base.DJIBaseProduct;
-
 
 public class MainActivity extends Activity implements SurfaceTextureListener,OnClickListener{
 
     private static final String TAG = MainActivity.class.getName();
-    protected DJICamera.CameraReceivedVideoDataCallback mReceivedVideoDataCallBack = null;
+    protected Camera.VideoDataCallback mReceivedVideoDataCallBack = null;
 
     // Codec for video live view
     protected DJICodecManager mCodecManager = null;
@@ -38,35 +37,39 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
     private ToggleButton mRecordBtn;
     private TextView recordingTime;
 
+    private Handler handler;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        handler = new Handler();
+
         initUI();
 
         // The callback for receiving the raw H264 video data for camera live view
-        mReceivedVideoDataCallBack = new CameraReceivedVideoDataCallback() {
+        mReceivedVideoDataCallBack = new Camera.VideoDataCallback() {
 
             @Override
-            public void onResult(byte[] videoBuffer, int size) {
+            public void onReceive(byte[] bytes, int size) {
                 if(mCodecManager != null){
                     // Send the raw H264 video data to codec manager for decoding
-                    mCodecManager.sendDataToDecoder(videoBuffer, size);
+                    mCodecManager.sendDataToDecoder(bytes, size);
                 }else {
                     Log.e(TAG, "mCodecManager is null");
                 }
             }
         };
 
-        DJICamera camera = FPVDemoApplication.getCameraInstance();
+        Camera camera = FPVDemoApplication.getCameraInstance();
 
         if (camera != null) {
 
-            camera.setDJICameraUpdatedSystemStateCallback(new DJICamera.CameraUpdatedSystemStateCallback() {
+            camera.setSystemStateCallback(new SystemState.Callback() {
                 @Override
-                public void onResult(CameraSystemState cameraSystemState) {
+                public void onUpdate(SystemState cameraSystemState) {
                     if (null != cameraSystemState) {
 
                         int recordTime = cameraSystemState.getCurrentVideoRecordingTimeInSeconds();
@@ -178,7 +181,7 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
 
     private void initPreviewer() {
 
-        DJIBaseProduct product = FPVDemoApplication.getProductInstance();
+        BaseProduct product = FPVDemoApplication.getProductInstance();
 
         if (product == null || !product.isConnected()) {
             showToast(getString(R.string.disconnected));
@@ -187,20 +190,20 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
                 mVideoSurface.setSurfaceTextureListener(this);
             }
             if (!product.getModel().equals(Model.UnknownAircraft)) {
-                DJICamera camera = product.getCamera();
+                Camera camera = product.getCamera();
                 if (camera != null){
                     // Set the callback
-                    camera.setDJICameraReceivedVideoDataCallback(mReceivedVideoDataCallBack);
+                    camera.setVideoDataCallback(mReceivedVideoDataCallBack);
                 }
             }
         }
     }
 
     private void uninitPreviewer() {
-        DJICamera camera = FPVDemoApplication.getCameraInstance();
+        Camera camera = FPVDemoApplication.getCameraInstance();
         if (camera != null){
             // Reset the callback
-            FPVDemoApplication.getCameraInstance().setDJICameraReceivedVideoDataCallback(null);
+            FPVDemoApplication.getCameraInstance().setVideoDataCallback(null);
         }
     }
 
@@ -249,11 +252,11 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
                 break;
             }
             case R.id.btn_shoot_photo_mode:{
-                switchCameraMode(DJICameraSettingsDef.CameraMode.ShootPhoto);
+                switchCameraMode(SettingsDefinitions.CameraMode.SHOOT_PHOTO);
                 break;
             }
             case R.id.btn_record_video_mode:{
-                switchCameraMode(DJICameraSettingsDef.CameraMode.RecordVideo);
+                switchCameraMode(SettingsDefinitions.CameraMode.RECORD_VIDEO);
                 break;
             }
             default:
@@ -261,11 +264,11 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
         }
     }
 
-    private void switchCameraMode(DJICameraSettingsDef.CameraMode cameraMode){
+    private void switchCameraMode(SettingsDefinitions.CameraMode cameraMode){
 
-        DJICamera camera = FPVDemoApplication.getCameraInstance();
+        Camera camera = FPVDemoApplication.getCameraInstance();
         if (camera != null) {
-            camera.setCameraMode(cameraMode, new DJICommonCallbacks.DJICompletionCallback() {
+            camera.setMode(cameraMode, new CommonCallbacks.CompletionCallback() {
                 @Override
                 public void onResult(DJIError error) {
 
@@ -277,47 +280,53 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
                 }
             });
             }
-
     }
 
     // Method for taking photo
     private void captureAction(){
 
-        DJICameraSettingsDef.CameraMode cameraMode = DJICameraSettingsDef.CameraMode.ShootPhoto;
-
-        final DJICamera camera = FPVDemoApplication.getCameraInstance();
+        final Camera camera = FPVDemoApplication.getCameraInstance();
         if (camera != null) {
 
-            DJICameraSettingsDef.CameraShootPhotoMode photoMode = DJICameraSettingsDef.CameraShootPhotoMode.Single; // Set the camera capture mode as Single mode
-            camera.startShootPhoto(photoMode, new DJICommonCallbacks.DJICompletionCallback() {
-
-                @Override
-                public void onResult(DJIError error) {
-                    if (error == null) {
-                        showToast("take photo: success");
-                    } else {
-                        showToast(error.getDescription());
+            SettingsDefinitions.ShootPhotoMode photoMode = SettingsDefinitions.ShootPhotoMode.SINGLE; // Set the camera capture mode as Single mode
+            camera.setShootPhotoMode(photoMode, new CommonCallbacks.CompletionCallback(){
+                    @Override
+                    public void onResult(DJIError djiError) {
+                        if (null == djiError) {
+                            handler.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    camera.startShootPhoto(new CommonCallbacks.CompletionCallback() {
+                                        @Override
+                                        public void onResult(DJIError djiError) {
+                                            if (djiError == null) {
+                                                showToast("take photo: success");
+                                            } else {
+                                                showToast(djiError.getDescription());
+                                            }
+                                        }
+                                    });
+                                }
+                            }, 2000);
+                        }
                     }
-                }
-
-            }); // Execute the startShootPhoto API
+            });
         }
     }
 
     // Method for starting recording
     private void startRecord(){
 
-        DJICameraSettingsDef.CameraMode cameraMode = DJICameraSettingsDef.CameraMode.RecordVideo;
-        final DJICamera camera = FPVDemoApplication.getCameraInstance();
+        final Camera camera = FPVDemoApplication.getCameraInstance();
         if (camera != null) {
-            camera.startRecordVideo(new DJICommonCallbacks.DJICompletionCallback(){
+            camera.startRecordVideo(new CommonCallbacks.CompletionCallback(){
                 @Override
-                public void onResult(DJIError error)
+                public void onResult(DJIError djiError)
                 {
-                    if (error == null) {
+                    if (djiError == null) {
                         showToast("Record video: success");
                     }else {
-                        showToast(error.getDescription());
+                        showToast(djiError.getDescription());
                     }
                 }
             }); // Execute the startRecordVideo API
@@ -327,17 +336,17 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
     // Method for stopping recording
     private void stopRecord(){
 
-        DJICamera camera = FPVDemoApplication.getCameraInstance();
+        Camera camera = FPVDemoApplication.getCameraInstance();
         if (camera != null) {
-            camera.stopRecordVideo(new DJICommonCallbacks.DJICompletionCallback(){
+            camera.stopRecordVideo(new CommonCallbacks.CompletionCallback(){
 
                 @Override
-                public void onResult(DJIError error)
+                public void onResult(DJIError djiError)
                 {
-                    if(error == null) {
+                    if(djiError == null) {
                         showToast("Stop recording: success");
                     }else {
-                        showToast(error.getDescription());
+                        showToast(djiError.getDescription());
                     }
                 }
             }); // Execute the stopRecordVideo API

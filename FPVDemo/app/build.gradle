@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion '23.0.2'
+    buildToolsVersion '23.0.1'
 
     defaultConfig {
         applicationId "com.dji.FPVDemo"
@@ -10,6 +10,8 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
+
     }
     buildTypes {
         release {
@@ -24,6 +26,7 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:23.3.0'
     compile 'com.android.support:design:23.3.0'
+    compile 'com.android.support:multidex:1.0.1'
     compile project(':dJISDKLIB')
 
 }

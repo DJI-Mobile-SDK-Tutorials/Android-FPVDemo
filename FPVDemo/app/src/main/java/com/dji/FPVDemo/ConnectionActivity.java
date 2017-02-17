@@ -14,8 +14,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import dji.sdk.products.DJIAircraft;
-import dji.sdk.base.DJIBaseProduct;
+import dji.sdk.base.BaseProduct;
+import dji.sdk.products.Aircraft;
 
 public class ConnectionActivity extends Activity implements View.OnClickListener {
 
@@ -104,13 +104,13 @@ public class ConnectionActivity extends Activity implements View.OnClickListener
     };
 
     private void refreshSDKRelativeUI() {
-        DJIBaseProduct mProduct = FPVDemoApplication.getProductInstance();
+        BaseProduct mProduct = FPVDemoApplication.getProductInstance();
 
         if (null != mProduct && mProduct.isConnected()) {
             Log.v(TAG, "refreshSDK: True");
             mBtnOpen.setEnabled(true);
 
-            String str = mProduct instanceof DJIAircraft ? "DJIAircraft" : "DJIHandHeld";
+            String str = mProduct instanceof Aircraft ? "DJIAircraft" : "DJIHandHeld";
             mTextConnectionStatus.setText("Status: " + str + " connected");
 
             if (null != mProduct.getModel()) {
@@ -127,7 +127,6 @@ public class ConnectionActivity extends Activity implements View.OnClickListener
             mTextConnectionStatus.setText(R.string.connection_loose);
         }
     }
-
 
     @Override
     public void onClick(View v) {
