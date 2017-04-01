@@ -1,7 +1,5 @@
 # Android-FPVDemo
 
-> **Note: This Sample Project is developed based on Android SDK v3.5.1, an update version for Android SDK v4.0 will be published soon.**
-
 ## Introduction
 
 This FPVDemo is designed for you to gain a basic understanding of the DJI Mobile SDK. It will implement the FPV view and two basic camera functionalities: **Take Photo** and **Record Video**.
