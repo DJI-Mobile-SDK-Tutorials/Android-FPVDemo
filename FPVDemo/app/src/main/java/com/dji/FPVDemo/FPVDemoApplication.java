@@ -11,12 +11,8 @@ import dji.common.error.DJIError;
 import dji.common.error.DJISDKError;
 import dji.sdk.base.BaseComponent;
 import dji.sdk.base.BaseProduct;
-import dji.sdk.base.DJIBaseComponent;
-import dji.sdk.base.DJIBaseProduct;
 import dji.sdk.camera.Camera;
 import dji.sdk.products.Aircraft;
-import dji.sdk.products.DJIAircraft;
-import dji.sdk.products.DJIHandHeld;
 import dji.sdk.products.HandHeld;
 import dji.sdk.sdkmanager.DJISDKManager;
 

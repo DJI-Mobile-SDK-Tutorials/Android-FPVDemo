@@ -22,12 +22,13 @@ import dji.common.product.Model;
 import dji.common.util.CommonCallbacks;
 import dji.sdk.base.BaseProduct;
 import dji.sdk.camera.Camera;
+import dji.sdk.camera.VideoFeeder;
 import dji.sdk.codec.DJICodecManager;
 
 public class MainActivity extends Activity implements SurfaceTextureListener,OnClickListener{
 
     private static final String TAG = MainActivity.class.getName();
-    protected Camera.VideoDataCallback mReceivedVideoDataCallBack = null;
+    protected VideoFeeder.VideoDataCallback mReceivedVideoDataCallBack = null;
 
     // Codec for video live view
     protected DJICodecManager mCodecManager = null;
@@ -50,15 +51,12 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
         initUI();
 
         // The callback for receiving the raw H264 video data for camera live view
-        mReceivedVideoDataCallBack = new Camera.VideoDataCallback() {
+        mReceivedVideoDataCallBack = new VideoFeeder.VideoDataCallback() {
 
             @Override
-            public void onReceive(byte[] bytes, int size) {
-                if(mCodecManager != null){
-                    // Send the raw H264 video data to codec manager for decoding
-                    mCodecManager.sendDataToDecoder(bytes, size);
-                }else {
-                    Log.e(TAG, "mCodecManager is null");
+            public void onReceive(byte[] videoBuffer, int size) {
+                if (mCodecManager != null) {
+                    mCodecManager.sendDataToDecoder(videoBuffer, size);
                 }
             }
         };
@@ -189,11 +187,10 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
             if (null != mVideoSurface) {
                 mVideoSurface.setSurfaceTextureListener(this);
             }
-            if (!product.getModel().equals(Model.UnknownAircraft)) {
-                Camera camera = product.getCamera();
-                if (camera != null){
-                    // Set the callback
-                    camera.setVideoDataCallback(mReceivedVideoDataCallBack);
+            if (!product.getModel().equals(Model.UNKNOWN_AIRCRAFT)) {
+                if (VideoFeeder.getInstance().getVideoFeeds() != null
+                        && VideoFeeder.getInstance().getVideoFeeds().size() > 0) {
+                    VideoFeeder.getInstance().getVideoFeeds().get(0).setCallback(mReceivedVideoDataCallBack);
                 }
             }
         }
@@ -203,7 +200,7 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
         Camera camera = FPVDemoApplication.getCameraInstance();
         if (camera != null){
             // Reset the callback
-            FPVDemoApplication.getCameraInstance().setVideoDataCallback(null);
+            VideoFeeder.getInstance().getVideoFeeds().get(0).setCallback(null);
         }
     }
 
