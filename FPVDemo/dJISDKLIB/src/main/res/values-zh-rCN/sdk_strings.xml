@@ -208,4 +208,17 @@
     <string name="dji_check_fc_imu_interfered_solution">解决方案：请远离地面磁场干扰</string>
     <string name="dji_check_fc_plain_propeller_on_plateau_solution">高原上请不要使用平原桨。</string>
     <string name="dji_check_fc_plateau_propeller_on_plain_solution">平原上请不要使用高原桨。</string>
+
+    <string name="dji_check_camera_no_sd_card_reason">SD卡未插入</string>
+    <string name="dji_check_camera_no_sd_card_solution">解决方案：插入SD卡</string>
+    <string name="dji_check_camera_sd_card_error_reason">SD卡错误</string>
+    <string name="dji_check_camera_sd_card_error_solution">解决方案：更换SD卡或者尝试格式化</string>
+    <string name="dji_check_camera_sd_card_no_space_reason">SD卡剩余空间不足</string>
+    <string name="dji_check_camera_sd_card_no_space_solution">解决方案：更换SD卡或者删除一些文件</string>
+    <string name="dji_check_camera_sd_card_full_reason">SD卡满</string>
+    <string name="dji_check_camera_sd_card_full_solution">解决方案：更换SD卡或者删除一些文件</string>
+    <string name="dji_check_camera_sd_card_read_only_reason">SD卡只读</string>
+    <string name="dji_check_camera_sd_card_read_only_solution">解决方案：更换SD卡或者使用其他工具修复</string>
+    <string name="dji_check_camera_sd_card_not_format_reason">SD卡未格式化</string>
+    <string name="dji_check_camera_sd_card_not_format_solution">解决方案：格式化SD卡</string>
 </resources>

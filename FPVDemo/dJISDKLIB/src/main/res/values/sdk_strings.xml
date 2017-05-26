@@ -210,4 +210,17 @@
     <string name="dji_check_fc_imu_interfered_solution">Solution: Move away from ground magnetic interference.</string>
     <string name="dji_check_fc_plain_propeller_on_plateau_solution">Do not use standard Propellers at high altitudes.</string>
     <string name="dji_check_fc_plateau_propeller_on_plain_solution">Do not use Plateau Propellers at low altitudes.</string>
+
+    <string name="dji_check_camera_no_sd_card_reason">NO SD Card</string>
+    <string name="dji_check_camera_no_sd_card_solution">Solution: Insert SD Card</string>
+    <string name="dji_check_camera_sd_card_error_reason">SD card error.</string>
+    <string name="dji_check_camera_sd_card_error_solution">Solution: Change SD card or try to format it.</string>
+    <string name="dji_check_camera_sd_card_no_space_reason">Remaining SD card capacity is not enough</string>
+    <string name="dji_check_camera_sd_card_no_space_solution">Solution: Change SD card or delete some files.</string>
+    <string name="dji_check_camera_sd_card_full_reason">SD card is full</string>
+    <string name="dji_check_camera_sd_card_full_solution">Solution: Change SD card or delete some files.</string>
+    <string name="dji_check_camera_sd_card_read_only_reason">SD card readonly</string>
+    <string name="dji_check_camera_sd_card_read_only_solution">Solution: Change SD card or repair it</string>
+    <string name="dji_check_camera_sd_card_not_format_reason">SD card not formatted</string>
+    <string name="dji_check_camera_sd_card_not_format_solution">Solution: Format the SD card</string>
 </resources>
