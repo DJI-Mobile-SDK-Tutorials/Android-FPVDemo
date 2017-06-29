@@ -1,14 +1,6 @@
 ECLIPSE ANDROID PROJECT IMPORT SUMMARY
 ======================================
 
-Ignored Files:
---------------
-The following files were *not* copied into the new Gradle project; you
-should evaluate whether these are still needed in your project and if
-so manually move them:
-
-* .DS_Store
-
 Replaced Jars with Dependencies:
 --------------------------------
 The importer recognized the following .jar files as third party
@@ -69,6 +61,7 @@ Eclipse projects. Here's how the projects were restructured:
 * libs/dji-sdk.jar => dJISDKLIB/libs/dji-sdk.jar
 * libs/dji_eventbus.jar => dJISDKLIB/libs/dji_eventbus.jar
 * libs/dji_gson.jar => dJISDKLIB/libs/dji_gson.jar
+* libs/eventbus-3.0.0.jar => dJISDKLIB/libs/eventbus-3.0.0.jar
 * libs/okhttp-3.2.0.jar => dJISDKLIB/libs/okhttp-3.2.0.jar
 * libs/okio-1.7.0.jar => dJISDKLIB/libs/okio-1.7.0.jar
 * libs/retrofit-2.0.1.jar => dJISDKLIB/libs/retrofit-2.0.1.jar
