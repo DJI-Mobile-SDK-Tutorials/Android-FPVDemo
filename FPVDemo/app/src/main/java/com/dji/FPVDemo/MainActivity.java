@@ -19,11 +19,13 @@ import dji.common.camera.SettingsDefinitions;
 import dji.common.camera.SystemState;
 import dji.common.error.DJIError;
 import dji.common.product.Model;
+import dji.common.useraccount.UserAccountState;
 import dji.common.util.CommonCallbacks;
 import dji.sdk.base.BaseProduct;
 import dji.sdk.camera.Camera;
 import dji.sdk.camera.VideoFeeder;
 import dji.sdk.codec.DJICodecManager;
+import dji.sdk.useraccount.UserAccountManager;
 
 public class MainActivity extends Activity implements SurfaceTextureListener,OnClickListener{
 
@@ -105,6 +107,23 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
 
     protected void onProductChange() {
         initPreviewer();
+        loginAccount();
+    }
+
+    private void loginAccount(){
+
+        UserAccountManager.getInstance().logIntoDJIUserAccount(this,
+                new CommonCallbacks.CompletionCallbackWith<UserAccountState>() {
+                    @Override
+                    public void onSuccess(final UserAccountState userAccountState) {
+                        Log.e(TAG, "Login Success");
+                    }
+                    @Override
+                    public void onFailure(DJIError error) {
+                        showToast("Login Error:"
+                                + error.getDescription());
+                    }
+                });
     }
 
     @Override
