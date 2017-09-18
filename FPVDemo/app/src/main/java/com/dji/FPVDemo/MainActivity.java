@@ -207,10 +207,7 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
                 mVideoSurface.setSurfaceTextureListener(this);
             }
             if (!product.getModel().equals(Model.UNKNOWN_AIRCRAFT)) {
-                if (VideoFeeder.getInstance().getVideoFeeds() != null
-                        && VideoFeeder.getInstance().getVideoFeeds().size() > 0) {
-                    VideoFeeder.getInstance().getVideoFeeds().get(0).setCallback(mReceivedVideoDataCallBack);
-                }
+                VideoFeeder.getInstance().getPrimaryVideoFeed().setCallback(mReceivedVideoDataCallBack);
             }
         }
     }
@@ -219,7 +216,7 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
         Camera camera = FPVDemoApplication.getCameraInstance();
         if (camera != null){
             // Reset the callback
-            VideoFeeder.getInstance().getVideoFeeds().get(0).setCallback(null);
+            VideoFeeder.getInstance().getPrimaryVideoFeed().setCallback(null);
         }
     }
 
