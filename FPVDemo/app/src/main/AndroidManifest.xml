@@ -31,7 +31,7 @@
     <!-- SDK requirement permission end -->
 
     <application
-        android:name=".FPVDemoApplication"
+        android:name=".MApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -42,7 +42,7 @@
         <uses-library android:name="com.android.future.usb.accessory" />
         <meta-data
             android:name="com.dji.sdk.API_KEY"
-            android:value="Please enter your App Key." />
+            android:value="Please enter your App Key here." />
 
         <activity
             android:name="dji.sdk.sdkmanager.DJIAoaControllerActivity"
@@ -60,6 +60,7 @@
         <!-- DJI SDK -->
 
         <activity android:name=".ConnectionActivity"
+            android:configChanges="orientation"
             android:screenOrientation="portrait">
 
             <intent-filter>
