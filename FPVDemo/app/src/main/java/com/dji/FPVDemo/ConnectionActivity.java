@@ -36,6 +36,7 @@ public class ConnectionActivity extends Activity implements View.OnClickListener
 
     private TextView mTextConnectionStatus;
     private TextView mTextProduct;
+    private TextView mVersionTv;
     private Button mBtnOpen;
     private static final String[] REQUIRED_PERMISSION_LIST = new String[]{
             Manifest.permission.VIBRATE,
@@ -177,7 +178,8 @@ public class ConnectionActivity extends Activity implements View.OnClickListener
         mBtnOpen = (Button) findViewById(R.id.btn_open);
         mBtnOpen.setOnClickListener(this);
         mBtnOpen.setEnabled(false);
-
+        mVersionTv = (TextView) findViewById(R.id.textView2);
+        mVersionTv.setText(getResources().getString(R.string.sdk_version, DJISDKManager.getInstance().getSDKVersion()));
     }
 
     protected BroadcastReceiver mReceiver = new BroadcastReceiver() {
