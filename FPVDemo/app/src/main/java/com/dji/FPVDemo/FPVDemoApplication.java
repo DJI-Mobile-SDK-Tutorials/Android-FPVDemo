@@ -24,7 +24,6 @@ public class FPVDemoApplication extends Application{
     public static final String FLAG_CONNECTION_CHANGE = "fpv_tutorial_connection_change";
 
     private DJISDKManager.SDKManagerCallback mDJISDKManagerCallback;
-    private BaseProduct.BaseProductListener mDJIBaseProductListener;
     private BaseComponent.ComponentListener mDJIComponentListener;
     private static BaseProduct mProduct;
     public Handler mHandler;
@@ -75,32 +74,6 @@ public class FPVDemoApplication extends Application{
     public void onCreate() {
         super.onCreate();
         mHandler = new Handler(Looper.getMainLooper());
-        mDJIComponentListener = new BaseComponent.ComponentListener() {
-
-            @Override
-            public void onConnectivityChange(boolean isConnected) {
-                notifyStatusChange();
-            }
-
-        };
-        mDJIBaseProductListener = new BaseProduct.BaseProductListener() {
-
-            @Override
-            public void onComponentChange(BaseProduct.ComponentKey key, BaseComponent oldComponent, BaseComponent newComponent) {
-
-                if(newComponent != null) {
-                    newComponent.setComponentListener(mDJIComponentListener);
-                }
-                notifyStatusChange();
-            }
-
-            @Override
-            public void onConnectivityChange(boolean isConnected) {
-
-                notifyStatusChange();
-            }
-
-        };
 
         /**
          * When starting SDK services, an instance of interface DJISDKManager.DJISDKManagerCallback will be used to listen to
@@ -110,10 +83,8 @@ public class FPVDemoApplication extends Application{
 
             //Listens to the SDK registration result
             @Override
-            public void onRegister(DJIError error) {
-
-                if(error == DJISDKError.REGISTRATION_SUCCESS) {
-
+            public void onRegister(DJIError djiError) {
+                if(djiError == DJISDKError.REGISTRATION_SUCCESS) {
                     Handler handler = new Handler(Looper.getMainLooper());
                     handler.post(new Runnable() {
                         @Override
@@ -121,7 +92,6 @@ public class FPVDemoApplication extends Application{
                             Toast.makeText(getApplicationContext(), "Register Success", Toast.LENGTH_LONG).show();
                         }
                     });
-
                     DJISDKManager.getInstance().startConnectionToProduct();
 
                 } else {
@@ -136,20 +106,42 @@ public class FPVDemoApplication extends Application{
                     });
 
                 }
-                Log.e("TAG", error.toString());
+                Log.e("TAG", djiError.toString());
             }
 
-            //Listens to the connected product changing, including two parts, component changing or product connection changing.
             @Override
-            public void onProductChange(BaseProduct oldProduct, BaseProduct newProduct) {
-
-                mProduct = newProduct;
-                if(mProduct != null) {
-                    mProduct.setBaseProductListener(mDJIBaseProductListener);
-                }
-
+            public void onProductDisconnect() {
+                Log.d("TAG", "onProductDisconnect");
                 notifyStatusChange();
             }
+            @Override
+            public void onProductConnect(BaseProduct baseProduct) {
+                Log.d("TAG", String.format("onProductConnect newProduct:%s", baseProduct));
+                notifyStatusChange();
+
+            }
+            @Override
+            public void onComponentChange(BaseProduct.ComponentKey componentKey, BaseComponent oldComponent,
+                                          BaseComponent newComponent) {
+                if (newComponent != null) {
+                    newComponent.setComponentListener(new BaseComponent.ComponentListener() {
+
+                        @Override
+                        public void onConnectivityChange(boolean isConnected) {
+                            Log.d("TAG", "onComponentConnectivityChanged: " + isConnected);
+                            notifyStatusChange();
+                        }
+                    });
+                }
+
+                Log.d("TAG",
+                        String.format("onComponentChange key:%s, oldComponent:%s, newComponent:%s",
+                                componentKey,
+                                oldComponent,
+                                newComponent));
+
+            }
+
         };
         //Check the permissions before registering the application for android system 6.0 above.
         int permissionCheck = ContextCompat.checkSelfPermission(getApplicationContext(), android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
