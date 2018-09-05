@@ -49,6 +49,6 @@ dependencies {
     compile 'com.android.support:design:26.1.0'
     compile 'com.android.support:multidex:1.0.1'
 
-    compile ('com.dji:dji-sdk:4.6')
-    provided ('com.dji:dji-sdk-provided:4.6')
+    compile ('com.dji:dji-sdk:4.7.1')
+    provided ('com.dji:dji-sdk-provided:4.7.1')
 }
