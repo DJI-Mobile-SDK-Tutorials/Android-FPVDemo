@@ -30,7 +30,7 @@ import dji.sdk.useraccount.UserAccountManager;
 public class MainActivity extends Activity implements SurfaceTextureListener,OnClickListener{
 
     private static final String TAG = MainActivity.class.getName();
-    protected VideoFeeder.VideoDataCallback mReceivedVideoDataCallBack = null;
+    protected VideoFeeder.VideoDataListener mReceivedVideoDataListener = null;
 
     // Codec for video live view
     protected DJICodecManager mCodecManager = null;
@@ -53,7 +53,7 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
         initUI();
 
         // The callback for receiving the raw H264 video data for camera live view
-        mReceivedVideoDataCallBack = new VideoFeeder.VideoDataCallback() {
+        mReceivedVideoDataListener = new VideoFeeder.VideoDataListener() {
 
             @Override
             public void onReceive(byte[] videoBuffer, int size) {
@@ -207,7 +207,7 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
                 mVideoSurface.setSurfaceTextureListener(this);
             }
             if (!product.getModel().equals(Model.UNKNOWN_AIRCRAFT)) {
-                VideoFeeder.getInstance().getPrimaryVideoFeed().setCallback(mReceivedVideoDataCallBack);
+                VideoFeeder.getInstance().getPrimaryVideoFeed().addVideoDataListener(mReceivedVideoDataListener);
             }
         }
     }
@@ -216,7 +216,7 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
         Camera camera = FPVDemoApplication.getCameraInstance();
         if (camera != null){
             // Reset the callback
-            VideoFeeder.getInstance().getPrimaryVideoFeed().setCallback(null);
+            VideoFeeder.getInstance().getPrimaryVideoFeed().addVideoDataListener(null);
         }
     }
 
