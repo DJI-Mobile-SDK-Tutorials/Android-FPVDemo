@@ -29,28 +29,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+            <state relative-caret-position="660">
+              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-          <provider editor-type-id="android-manifest">
-            <state />
-          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="596">
-              <caret line="36" column="40" lean-forward="false" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+            <state relative-caret-position="358">
+              <caret line="40" column="24" lean-forward="true" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
               <folding>
                 <element signature="e#1850#1868#0" expanded="true" />
               </folding>
             </state>
+          </provider>
+          <provider editor-type-id="android-manifest">
+            <state />
           </provider>
         </entry>
       </file>
@@ -67,8 +67,8 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+            <state relative-caret-position="660">
+              <caret line="30" column="1" lean-forward="false" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -77,14 +77,53 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dji/FPVDemo/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4796">
-              <caret line="243" column="21" lean-forward="false" selection-start-line="243" selection-start-column="21" selection-end-line="243" selection-end-column="21" />
+            <state relative-caret-position="-5349">
+              <caret line="55" column="37" lean-forward="false" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
               <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#8143#8144#0" expanded="false" />
-                <element signature="e#8240#8241#0" expanded="false" />
+                <element signature="e#1811#2096#0" expanded="true" />
+                <element signature="e#2095#2096#0" expanded="true" />
+                <element signature="e#2237#3660#0" expanded="true" />
+                <element signature="e#3659#3660#0" expanded="true" />
                 <marker date="1542005355000" expanded="true" signature="7178:7201" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dji/FPVDemo/MApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FPVDemoApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dji/FPVDemo/FPVDemoApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="128" column="33" lean-forward="false" selection-start-line="128" selection-start-column="33" selection-end-line="128" selection-end-column="33" />
+              <folding>
+                <element signature="e#2678#2935#0" expanded="true" />
+                <element signature="e#2934#2935#0" expanded="true" />
+                <element signature="e#3149#3437#0" expanded="true" />
+                <element signature="e#3436#3437#0" expanded="true" />
+                <element signature="e#4579#4580#0" expanded="true" />
+                <element signature="e#6125#6327#0" expanded="true" />
+                <element signature="e#6326#6327#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConnectionActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dji/FPVDemo/ConnectionActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="775">
+              <caret line="180" column="5" lean-forward="false" selection-start-line="180" selection-start-column="5" selection-end-line="180" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -151,6 +190,11 @@
                 <option name="name" value="validateSigningDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare android.arch.lifecycle:livedata-core:1.1.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareAndroidArchLifecycleLivedataCore110Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Prepare com.android.support:support-compat:27.0.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="prepareComAndroidSupportSupportCompat2700Library" />
@@ -189,11 +233,6 @@
                 <option name="description" value="Creates a version of android.jar that's suitable for unit tests." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="mockableAndroidJar" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare com.dji:dji-sdk:4.9" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComDjiDjiSdk49Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Displays the tasks runnable from root project 'FPVDemo' (some of the displayed tasks may belong to subprojects)." />
@@ -283,6 +322,11 @@
                 <option name="description" value="Deletes the build cache directory." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="cleanBuildCache" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare android.arch.lifecycle:extensions:1.1.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareAndroidArchLifecycleExtensions110Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -566,6 +610,11 @@
                 <option name="name" value="compileDebugUnitTestSources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.dji:library-networkrtk-helper:1.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComDjiLibraryNetworkrtkHelper10Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="transformNativeLibsWithMergeJniLibsForRelease" />
               </ExternalTaskPojo>
@@ -605,6 +654,11 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="compileReleaseJavaWithJavac" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare android.arch.lifecycle:viewmodel:1.1.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareAndroidArchLifecycleViewmodel110Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -654,11 +708,6 @@
                 <option name="name" value="check" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare android.arch.lifecycle:runtime:1.0.0" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareAndroidArchLifecycleRuntime100Library" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="javaPreCompileDebug" />
               </ExternalTaskPojo>
@@ -689,6 +738,11 @@
                 <option name="description" value="Installs the Debug build." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="installDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.dji:dji-sdk:4.10" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComDjiDjiSdk410Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -736,6 +790,11 @@
                 <option name="description" value="Displays the dependent components of components in root project 'FPVDemo'. [incubating]" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="dependentComponents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare android.arch.lifecycle:livedata:1.1.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareAndroidArchLifecycleLivedata110Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Displays all buildscript dependencies declared in root project 'FPVDemo'." />
@@ -791,6 +850,11 @@
                 <option name="name" value="prepareDebugUnitTestDependencies" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare android.arch.core:runtime:1.1.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareAndroidArchCoreRuntime110Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="generateReleaseResources" />
               </ExternalTaskPojo>
@@ -812,6 +876,11 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="compileDebugAndroidTestAidl" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare android.arch.lifecycle:runtime:1.1.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareAndroidArchLifecycleRuntime110Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -899,6 +968,11 @@
                 <option name="name" value="validateSigningDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare android.arch.lifecycle:livedata-core:1.1.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareAndroidArchLifecycleLivedataCore110Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Prepare com.android.support:support-compat:27.0.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="prepareComAndroidSupportSupportCompat2700Library" />
@@ -937,11 +1011,6 @@
                 <option name="description" value="Displays the configuration model of project ':app'. [incubating]" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="model" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare com.dji:dji-sdk:4.9" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareComDjiDjiSdk49Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Displays the tasks runnable from project ':app'." />
@@ -1026,6 +1095,11 @@
                 <option name="description" value="Deletes the build cache directory." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="cleanBuildCache" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare android.arch.lifecycle:extensions:1.1.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareAndroidArchLifecycleExtensions110Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
@@ -1304,6 +1378,11 @@
                 <option name="name" value="compileDebugUnitTestSources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.dji:library-networkrtk-helper:1.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareComDjiLibraryNetworkrtkHelper10Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="transformNativeLibsWithMergeJniLibsForRelease" />
               </ExternalTaskPojo>
@@ -1343,6 +1422,11 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="compileReleaseJavaWithJavac" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare android.arch.lifecycle:viewmodel:1.1.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareAndroidArchLifecycleViewmodel110Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
@@ -1392,11 +1476,6 @@
                 <option name="name" value="check" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare android.arch.lifecycle:runtime:1.0.0" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareAndroidArchLifecycleRuntime100Library" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="javaPreCompileDebug" />
               </ExternalTaskPojo>
@@ -1427,6 +1506,11 @@
                 <option name="description" value="Installs the Debug build." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="installDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.dji:dji-sdk:4.10" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareComDjiDjiSdk410Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
@@ -1474,6 +1558,11 @@
                 <option name="description" value="Displays the dependent components of components in project ':app'. [incubating]" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="dependentComponents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare android.arch.lifecycle:livedata:1.1.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareAndroidArchLifecycleLivedata110Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Displays all buildscript dependencies declared in project ':app'." />
@@ -1529,6 +1618,11 @@
                 <option name="name" value="prepareDebugUnitTestDependencies" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare android.arch.core:runtime:1.1.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareAndroidArchCoreRuntime110Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="generateReleaseResources" />
               </ExternalTaskPojo>
@@ -1550,6 +1644,11 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="compileDebugAndroidTestAidl" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare android.arch.lifecycle:runtime:1.1.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareAndroidArchLifecycleRuntime110Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
@@ -1928,16 +2027,18 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/src/main/java/com/dji/FPVDemo/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/dji/FPVDemo/ConnectionActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/dji/FPVDemo/FPVDemoApplication.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="984" />
+    <option name="x" value="743" />
     <option name="y" value="23" />
-    <option name="width" value="1567" />
-    <option name="height" value="1417" />
+    <option name="width" value="1791" />
+    <option name="height" value="1177" />
   </component>
   <component name="ProjectView">
     <navigator currentView="AndroidView" proportions="" version="1">
@@ -1954,10 +2055,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1978,6 +2079,38 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPVDemo" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPVDemo" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPVDemo" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -2086,8 +2219,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1548755918636" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1557929638504" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2186,8 +2318,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1548755918636" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1557929638504" />
       </method>
     </configuration>
     <list size="1">
@@ -2229,38 +2360,38 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="984" y="23" width="1567" height="1417" extended-state="0" />
+    <frame x="743" y="23" width="1791" height="1177" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15087396" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21770492" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18982276" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31841433" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -2273,6 +2404,150 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="36" column="40" lean-forward="false" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+          <folding>
+            <element signature="e#1850#1868#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dji/FPVDemo/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4796">
+          <caret line="243" column="21" lean-forward="false" selection-start-line="243" selection-start-column="21" selection-end-line="243" selection-end-column="21" />
+          <folding>
+            <element signature="e#1811#2096#0" expanded="true" />
+            <element signature="e#2095#2096#0" expanded="true" />
+            <element signature="e#2237#3660#0" expanded="true" />
+            <element signature="e#3659#3660#0" expanded="true" />
+            <marker date="1542005355000" expanded="true" signature="7178:7201" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="36" column="40" lean-forward="false" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+          <folding>
+            <element signature="e#1850#1868#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="51" lean-forward="false" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dji/FPVDemo/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4796">
+          <caret line="243" column="21" lean-forward="false" selection-start-line="243" selection-start-column="21" selection-end-line="243" selection-end-column="21" />
+          <folding>
+            <element signature="e#1811#2096#0" expanded="true" />
+            <element signature="e#2095#2096#0" expanded="true" />
+            <element signature="e#2237#3660#0" expanded="true" />
+            <element signature="e#3659#3660#0" expanded="true" />
+            <marker date="1542005355000" expanded="true" signature="7178:7201" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="36" column="40" lean-forward="false" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+          <folding>
+            <element signature="e#1850#1868#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dji/FPVDemo/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4796">
+          <caret line="243" column="21" lean-forward="false" selection-start-line="243" selection-start-column="21" selection-end-line="243" selection-end-column="21" />
+          <folding>
+            <element signature="e#1811#2096#0" expanded="true" />
+            <element signature="e#2095#2096#0" expanded="true" />
+            <element signature="e#2237#3660#0" expanded="true" />
+            <element signature="e#3659#3660#0" expanded="true" />
+            <marker date="1542005355000" expanded="true" signature="7178:7201" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -2322,9 +2597,10 @@
         <state relative-caret-position="4796">
           <caret line="243" column="21" lean-forward="false" selection-start-line="243" selection-start-column="21" selection-end-line="243" selection-end-column="21" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#8143#8144#0" expanded="false" />
-            <element signature="e#8240#8241#0" expanded="false" />
+            <element signature="e#1811#2096#0" expanded="true" />
+            <element signature="e#2095#2096#0" expanded="true" />
+            <element signature="e#2237#3660#0" expanded="true" />
+            <element signature="e#3659#3660#0" expanded="true" />
             <marker date="1542005355000" expanded="true" signature="7178:7201" ph="{...}" />
           </folding>
         </state>
@@ -2351,9 +2627,10 @@
         <state relative-caret-position="4796">
           <caret line="243" column="21" lean-forward="false" selection-start-line="243" selection-start-column="21" selection-end-line="243" selection-end-column="21" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#8143#8144#0" expanded="false" />
-            <element signature="e#8240#8241#0" expanded="false" />
+            <element signature="e#1811#2096#0" expanded="true" />
+            <element signature="e#2095#2096#0" expanded="true" />
+            <element signature="e#2237#3660#0" expanded="true" />
+            <element signature="e#3659#3660#0" expanded="true" />
             <marker date="1542005355000" expanded="true" signature="7178:7201" ph="{...}" />
           </folding>
         </state>
@@ -2392,9 +2669,10 @@
         <state relative-caret-position="4796">
           <caret line="243" column="21" lean-forward="false" selection-start-line="243" selection-start-column="21" selection-end-line="243" selection-end-column="21" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#8143#8144#0" expanded="false" />
-            <element signature="e#8240#8241#0" expanded="false" />
+            <element signature="e#1811#2096#0" expanded="true" />
+            <element signature="e#2095#2096#0" expanded="true" />
+            <element signature="e#2237#3660#0" expanded="true" />
+            <element signature="e#3659#3660#0" expanded="true" />
             <marker date="1542005355000" expanded="true" signature="7178:7201" ph="{...}" />
           </folding>
         </state>
@@ -2413,9 +2691,10 @@
         <state relative-caret-position="4796">
           <caret line="243" column="21" lean-forward="false" selection-start-line="243" selection-start-column="21" selection-end-line="243" selection-end-column="21" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#8143#8144#0" expanded="false" />
-            <element signature="e#8240#8241#0" expanded="false" />
+            <element signature="e#1811#2096#0" expanded="true" />
+            <element signature="e#2095#2096#0" expanded="true" />
+            <element signature="e#2237#3660#0" expanded="true" />
+            <element signature="e#3659#3660#0" expanded="true" />
             <marker date="1542005355000" expanded="true" signature="7178:7201" ph="{...}" />
           </folding>
         </state>
@@ -2444,9 +2723,10 @@
         <state relative-caret-position="4796">
           <caret line="243" column="21" lean-forward="false" selection-start-line="243" selection-start-column="21" selection-end-line="243" selection-end-column="21" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#8143#8144#0" expanded="false" />
-            <element signature="e#8240#8241#0" expanded="false" />
+            <element signature="e#1811#2096#0" expanded="true" />
+            <element signature="e#2095#2096#0" expanded="true" />
+            <element signature="e#2237#3660#0" expanded="true" />
+            <element signature="e#3659#3660#0" expanded="true" />
             <marker date="1542005355000" expanded="true" signature="7178:7201" ph="{...}" />
           </folding>
         </state>
@@ -2475,9 +2755,10 @@
         <state relative-caret-position="4796">
           <caret line="243" column="21" lean-forward="true" selection-start-line="243" selection-start-column="21" selection-end-line="243" selection-end-column="21" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#8143#8144#0" expanded="false" />
-            <element signature="e#8240#8241#0" expanded="false" />
+            <element signature="e#1811#2096#0" expanded="true" />
+            <element signature="e#2095#2096#0" expanded="true" />
+            <element signature="e#2237#3660#0" expanded="true" />
+            <element signature="e#3659#3660#0" expanded="true" />
             <marker date="1542005355000" expanded="true" signature="7178:7201" ph="{...}" />
           </folding>
         </state>
@@ -2493,36 +2774,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="30" column="1" lean-forward="false" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dji/FPVDemo/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4796">
-          <caret line="243" column="21" lean-forward="false" selection-start-line="243" selection-start-column="21" selection-end-line="243" selection-end-column="21" />
+        <state relative-caret-position="-5349">
+          <caret line="55" column="37" lean-forward="false" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#8143#8144#0" expanded="false" />
-            <element signature="e#8240#8241#0" expanded="false" />
+            <element signature="e#1811#2096#0" expanded="true" />
+            <element signature="e#2095#2096#0" expanded="true" />
+            <element signature="e#2237#3660#0" expanded="true" />
+            <element signature="e#3659#3660#0" expanded="true" />
             <marker date="1542005355000" expanded="true" signature="7178:7201" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dji/FPVDemo/MApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+        <state relative-caret-position="110">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dji/FPVDemo/ConnectionActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="36" column="40" lean-forward="false" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+        <state relative-caret-position="775">
+          <caret line="180" column="5" lean-forward="false" selection-start-line="180" selection-start-column="5" selection-end-line="180" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dji/FPVDemo/FPVDemoApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="128" column="33" lean-forward="false" selection-start-line="128" selection-start-column="33" selection-end-line="128" selection-end-column="33" />
           <folding>
-            <element signature="e#1850#1868#0" expanded="true" />
+            <element signature="e#2678#2935#0" expanded="true" />
+            <element signature="e#2934#2935#0" expanded="true" />
+            <element signature="e#3149#3437#0" expanded="true" />
+            <element signature="e#3436#3437#0" expanded="true" />
+            <element signature="e#4579#4580#0" expanded="true" />
+            <element signature="e#6125#6327#0" expanded="true" />
+            <element signature="e#6326#6327#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2537,10 +2838,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+        <state relative-caret-position="660">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="40" column="24" lean-forward="true" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
+          <folding>
+            <element signature="e#1850#1868#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
       </provider>
     </entry>
   </component>

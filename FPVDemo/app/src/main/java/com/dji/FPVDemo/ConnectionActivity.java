@@ -29,6 +29,7 @@ import dji.log.DJILog;
 import dji.sdk.base.BaseComponent;
 import dji.sdk.base.BaseProduct;
 import dji.sdk.products.Aircraft;
+import dji.sdk.sdkmanager.DJISDKInitEvent;
 import dji.sdk.sdkmanager.DJISDKManager;
 
 public class ConnectionActivity extends Activity implements View.OnClickListener {
@@ -167,6 +168,10 @@ public class ConnectionActivity extends Activity implements View.OnClickListener
                                             componentKey,
                                             oldComponent,
                                             newComponent));
+
+                        }
+                        @Override
+                        public void onInitProcess(DJISDKInitEvent djisdkInitEvent, int i) {
 
                         }
                     });
