@@ -8,7 +8,7 @@ This FPVDemo is designed for you to gain a basic understanding of the DJI Mobile
 
  - Android Studio 2.0+
  - Android System 4.1+
- - DJI Android SDK 4.11
+ - DJI Android SDK 4.12
 
 ## Tutorial
 
@@ -18,7 +18,7 @@ For this demo's tutorial: **Creating a Camera Application**, please refer to <ht
 
 We’d love to hear your feedback on this demo and tutorial.
 
-Please use **Stack Overflow** [dji-sdk](https://stackoverflow.com/questions/tagged/dji-sdk) or **email** [dev@dji.com](dev@dji.com) when you meet any problems of using this demo. At a minimum please let us know:
+Please use **DJI Developer Forum** [dji-forum](https://forum.dji.com/forum-139-1.html?from=developer) or **email** [dev@dji.com](dev@dji.com) when you meet any problems of using this demo. At a minimum please let us know:
 
 * Which DJI Product you are using?
 * Which Android Device and Android System version you are using?
