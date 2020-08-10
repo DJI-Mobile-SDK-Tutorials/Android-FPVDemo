@@ -121,6 +121,12 @@ public class FPVDemoApplication extends Application{
                 notifyStatusChange();
 
             }
+
+            @Override
+            public void onProductChanged(BaseProduct baseProduct) {
+                notifyStatusChange();
+            }
+
             @Override
             public void onComponentChange(BaseProduct.ComponentKey componentKey, BaseComponent oldComponent,
                                           BaseComponent newComponent) {

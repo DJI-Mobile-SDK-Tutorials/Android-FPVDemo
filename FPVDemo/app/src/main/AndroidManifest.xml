@@ -46,10 +46,6 @@
             android:name="com.dji.sdk.API_KEY"
             android:value="Please enter your App Key here." />
 
-        <activity
-            android:name="dji.sdk.sdkmanager.DJIAoaControllerActivity"
-            android:theme="@android:style/Theme.Translucent" >
-        </activity>
         <service android:name="dji.sdk.sdkmanager.DJIGlobalService" >
         </service>
         <!-- DJI SDK -->
