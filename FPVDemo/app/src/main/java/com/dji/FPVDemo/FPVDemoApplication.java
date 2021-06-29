@@ -25,7 +25,6 @@ public class FPVDemoApplication extends Application{
 
     public static final String FLAG_CONNECTION_CHANGE = "fpv_tutorial_connection_change";
 
-    private DJISDKManager.SDKManagerCallback mDJISDKManagerCallback;
     private static BaseProduct mProduct;
     public Handler mHandler;
 
@@ -56,18 +55,13 @@ public class FPVDemoApplication extends Application{
     }
 
     public static synchronized Camera getCameraInstance() {
-
         if (getProductInstance() == null) return null;
-
         Camera camera = null;
-
         if (getProductInstance() instanceof Aircraft){
             camera = ((Aircraft) getProductInstance()).getCamera();
-
         } else if (getProductInstance() instanceof HandHeld) {
             camera = ((HandHeld) getProductInstance()).getCamera();
         }
-
         return camera;
     }
 
@@ -80,46 +74,40 @@ public class FPVDemoApplication extends Application{
          * When starting SDK services, an instance of interface DJISDKManager.DJISDKManagerCallback will be used to listen to
          * the SDK Registration result and the product changing.
          */
-        mDJISDKManagerCallback = new DJISDKManager.SDKManagerCallback() {
+        //Listens to the SDK registration result
+        DJISDKManager.SDKManagerCallback mDJISDKManagerCallback = new DJISDKManager.SDKManagerCallback() {
 
             //Listens to the SDK registration result
             @Override
             public void onRegister(DJIError djiError) {
-                if(djiError == DJISDKError.REGISTRATION_SUCCESS) {
-                    Handler handler = new Handler(Looper.getMainLooper());
+                Handler handler = new Handler(Looper.getMainLooper());
+                if (djiError == DJISDKError.REGISTRATION_SUCCESS) {
                     handler.post(new Runnable() {
                         @Override
                         public void run() {
-                            Toast.makeText(getApplicationContext(), "Register Success", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "SDK register success", Toast.LENGTH_LONG).show();
                         }
                     });
                     DJISDKManager.getInstance().startConnectionToProduct();
-
                 } else {
-
-                    Handler handler = new Handler(Looper.getMainLooper());
                     handler.post(new Runnable() {
-
                         @Override
                         public void run() {
-                            Toast.makeText(getApplicationContext(), "Register sdk fails, check network is available", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "SDK register fail", Toast.LENGTH_LONG).show();
                         }
                     });
 
                 }
-                Log.e("TAG", djiError.toString());
             }
 
             @Override
             public void onProductDisconnect() {
-                Log.d("TAG", "onProductDisconnect");
                 notifyStatusChange();
             }
+
             @Override
             public void onProductConnect(BaseProduct baseProduct) {
-                Log.d("TAG", String.format("onProductConnect newProduct:%s", baseProduct));
                 notifyStatusChange();
-
             }
 
             @Override
@@ -128,25 +116,15 @@ public class FPVDemoApplication extends Application{
             }
 
             @Override
-            public void onComponentChange(BaseProduct.ComponentKey componentKey, BaseComponent oldComponent,
-                                          BaseComponent newComponent) {
+            public void onComponentChange(BaseProduct.ComponentKey componentKey, BaseComponent oldComponent, BaseComponent newComponent) {
                 if (newComponent != null) {
                     newComponent.setComponentListener(new BaseComponent.ComponentListener() {
-
                         @Override
                         public void onConnectivityChange(boolean isConnected) {
-                            Log.d("TAG", "onComponentConnectivityChanged: " + isConnected);
                             notifyStatusChange();
                         }
                     });
                 }
-
-                Log.d("TAG",
-                        String.format("onComponentChange key:%s, oldComponent:%s, newComponent:%s",
-                                componentKey,
-                                oldComponent,
-                                newComponent));
-
             }
 
             @Override
@@ -160,6 +138,7 @@ public class FPVDemoApplication extends Application{
             }
 
         };
+
         //Check the permissions before registering the application for android system 6.0 above.
         int permissionCheck = ContextCompat.checkSelfPermission(getApplicationContext(), android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
         int permissionCheck2 = ContextCompat.checkSelfPermission(getApplicationContext(), android.Manifest.permission.READ_PHONE_STATE);
@@ -179,12 +158,10 @@ public class FPVDemoApplication extends Application{
     }
 
     private Runnable updateRunnable = new Runnable() {
-
         @Override
         public void run() {
             Intent intent = new Intent(FLAG_CONNECTION_CHANGE);
             getApplicationContext().sendBroadcast(intent);
         }
     };
-
 }

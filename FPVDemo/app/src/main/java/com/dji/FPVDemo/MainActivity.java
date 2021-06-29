@@ -260,71 +260,91 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
     public void onClick(View v) {
 
         switch (v.getId()) {
-            case R.id.btn_capture:{
+            case R.id.btn_capture:
                 captureAction();
                 break;
-            }
-            case R.id.btn_shoot_photo_mode:{
-                switchCameraMode(SettingsDefinitions.CameraMode.SHOOT_PHOTO);
+            case R.id.btn_shoot_photo_mode:
+                if (isMavicAir2() || isM300()) {
+                    switchCameraFlatMode(SettingsDefinitions.FlatCameraMode.PHOTO_SINGLE);
+                }else {
+                    switchCameraMode(SettingsDefinitions.CameraMode.SHOOT_PHOTO);
+                }
                 break;
-            }
-            case R.id.btn_record_video_mode:{
-                switchCameraMode(SettingsDefinitions.CameraMode.RECORD_VIDEO);
+            case R.id.btn_record_video_mode:
+                if (isMavicAir2() || isM300()) {
+                    switchCameraFlatMode(SettingsDefinitions.FlatCameraMode.VIDEO_NORMAL);
+                }else {
+                    switchCameraMode(SettingsDefinitions.CameraMode.RECORD_VIDEO);
+                }
                 break;
-            }
             default:
                 break;
         }
     }
 
-    private void switchCameraMode(SettingsDefinitions.CameraMode cameraMode){
-
+    private void switchCameraFlatMode(SettingsDefinitions.FlatCameraMode flatCameraMode){
         Camera camera = FPVDemoApplication.getCameraInstance();
         if (camera != null) {
-            camera.setMode(cameraMode, new CommonCallbacks.CompletionCallback() {
-                @Override
-                public void onResult(DJIError error) {
-
-                    if (error == null) {
-                        showToast("Switch Camera Mode Succeeded");
-                    } else {
-                        showToast(error.getDescription());
-                    }
+            camera.setFlatMode(flatCameraMode, error -> {
+                if (error == null) {
+                    showToast("Switch Camera Flat Mode Succeeded");
+                } else {
+                    showToast(error.getDescription());
                 }
             });
-            }
+        }
+    }
+
+    private void switchCameraMode(SettingsDefinitions.CameraMode cameraMode){
+        Camera camera = FPVDemoApplication.getCameraInstance();
+        if (camera != null) {
+            camera.setMode(cameraMode, error -> {
+                if (error == null) {
+                    showToast("Switch Camera Mode Succeeded");
+                } else {
+                    showToast(error.getDescription());
+                }
+            });
+        }
     }
 
     // Method for taking photo
     private void captureAction(){
-
         final Camera camera = FPVDemoApplication.getCameraInstance();
         if (camera != null) {
-
-            SettingsDefinitions.ShootPhotoMode photoMode = SettingsDefinitions.ShootPhotoMode.SINGLE; // Set the camera capture mode as Single mode
-            camera.setShootPhotoMode(photoMode, new CommonCallbacks.CompletionCallback(){
-                    @Override
-                    public void onResult(DJIError djiError) {
-                        if (null == djiError) {
-                            handler.postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    camera.startShootPhoto(new CommonCallbacks.CompletionCallback() {
-                                        @Override
-                                        public void onResult(DJIError djiError) {
-                                            if (djiError == null) {
-                                                showToast("take photo: success");
-                                            } else {
-                                                showToast(djiError.getDescription());
-                                            }
-                                        }
-                                    });
-                                }
-                            }, 2000);
-                        }
+            if (isMavicAir2() || isM300()) {
+                camera.setFlatMode(SettingsDefinitions.FlatCameraMode.PHOTO_SINGLE, djiError -> {
+                    if (null == djiError) {
+                        takePhoto();
                     }
-            });
+                });
+            }else {
+                camera.setShootPhotoMode(SettingsDefinitions.ShootPhotoMode.SINGLE, djiError -> {
+                    if (null == djiError) {
+                        takePhoto();
+                    }
+                });
+            }
         }
+    }
+
+    private void takePhoto(){
+        final Camera camera = FPVDemoApplication.getCameraInstance();
+        if (camera == null){
+            return;
+        }
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                camera.startShootPhoto(djiError -> {
+                    if (djiError == null) {
+                        showToast("take photo: success");
+                    } else {
+                        showToast(djiError.getDescription());
+                    }
+                });
+            }
+        }, 2000);
     }
 
     // Method for starting recording
@@ -332,15 +352,11 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
 
         final Camera camera = FPVDemoApplication.getCameraInstance();
         if (camera != null) {
-            camera.startRecordVideo(new CommonCallbacks.CompletionCallback(){
-                @Override
-                public void onResult(DJIError djiError)
-                {
-                    if (djiError == null) {
-                        showToast("Record video: success");
-                    }else {
-                        showToast(djiError.getDescription());
-                    }
+            camera.startRecordVideo(djiError -> {
+                if (djiError == null) {
+                    showToast("Record video: success");
+                }else {
+                    showToast(djiError.getDescription());
                 }
             }); // Execute the startRecordVideo API
         }
@@ -351,19 +367,29 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
 
         Camera camera = FPVDemoApplication.getCameraInstance();
         if (camera != null) {
-            camera.stopRecordVideo(new CommonCallbacks.CompletionCallback(){
-
-                @Override
-                public void onResult(DJIError djiError)
-                {
-                    if(djiError == null) {
-                        showToast("Stop recording: success");
-                    }else {
-                        showToast(djiError.getDescription());
-                    }
+            camera.stopRecordVideo(djiError -> {
+                if(djiError == null) {
+                    showToast("Stop recording: success");
+                }else {
+                    showToast(djiError.getDescription());
                 }
             }); // Execute the stopRecordVideo API
         }
+    }
 
+    private boolean isMavicAir2(){
+        BaseProduct baseProduct = FPVDemoApplication.getProductInstance();
+        if (baseProduct != null) {
+            return baseProduct.getModel() == Model.MAVIC_AIR_2;
+        }
+        return false;
+    }
+
+    private boolean isM300(){
+        BaseProduct baseProduct = FPVDemoApplication.getProductInstance();
+        if (baseProduct != null) {
+            return baseProduct.getModel() == Model.MATRICE_300_RTK;
+        }
+        return false;
     }
 }

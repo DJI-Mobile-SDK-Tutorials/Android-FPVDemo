@@ -5,7 +5,6 @@ import android.content.Context;
 
 import com.secneo.sdk.Helper;
 
-
 public class MApplication extends Application {
 
     private FPVDemoApplication fpvDemoApplication;
@@ -24,5 +23,4 @@ public class MApplication extends Application {
         super.onCreate();
         fpvDemoApplication.onCreate();
     }
-
 }

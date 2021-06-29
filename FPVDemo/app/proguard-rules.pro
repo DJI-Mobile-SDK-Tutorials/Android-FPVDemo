@@ -58,6 +58,8 @@
 
 -keep class org.greenrobot.eventbus.**{*;}
 
+-keep class it.sauronsoftware.ftp4j.**{*;}
+
 -keepclasseswithmembers,allowshrinking class * {
     native <methods>;
 }
@@ -77,12 +79,10 @@
     public void *(android.view.View);
 }
 -keep class androidx.** { *; }
--keep class android.** {*;}
 -keep class android.media.** { *; }
 -keep class okio.** { *; }
--keep class com.lmax.disruptor.** {
-    *;
-}
+-keep class com.lmax.disruptor.** { *; }
+-keep class com.qx.wz.dj.rtcm.* { *; }
 
 -dontwarn com.mapbox.services.android.location.LostLocationEngine
 -dontwarn com.mapbox.services.android.location.MockLocationEngine
@@ -112,4 +112,11 @@
 -keepclassmembers class android.arch.** { *; }
 -keep class android.arch.** { *; }
 -dontwarn android.arch.**
--ignorewarnings
+
+-keep class org.apache.commons.** {*;}
+
+
+#<------------ utmiss config start------------>
+-keep class dji.sdk.utmiss.** { *; }
+-keep class utmisslib.** { *; }
+#<------------ utmiss config end------------>
