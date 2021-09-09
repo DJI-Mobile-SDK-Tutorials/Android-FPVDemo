@@ -18,7 +18,7 @@ For this demo's tutorial: **Creating a Camera Application**, please refer to <ht
 
 We’d love to hear your feedback on this demo and tutorial.
 
-Please use **DJI Developer Forum** [dji-forum](https://forum.dji.com/forum-139-1.html?from=developer) or **email** [dev@dji.com](dev@dji.com) when you meet any problems of using this demo. At a minimum please let us know:
+Please use [DJI Support] (https://djisdksupport.zendesk.com/hc/requests/new)  when you meet any problems of using this demo. At a minimum please let us know:
 
 * Which DJI Product you are using?
 * Which Android Device and Android System version you are using?
