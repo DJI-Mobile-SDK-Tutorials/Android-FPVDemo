@@ -8,7 +8,7 @@ This FPVDemo is designed for you to gain a basic understanding of the DJI Mobile
 
  - Android Studio 2.0+
  - Android System 4.1+
- - DJI Android SDK 4.15.1
+ - DJI Android SDK 4.16
 
 ## Tutorial
 
